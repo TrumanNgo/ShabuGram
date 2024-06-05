@@ -1,7 +1,7 @@
 # ShabuGram
  Simple Clone of Instagram
 
- Goals
+ ### Goals
  -UI for
     -commenting and likes
     -Upload Photos and report harmful images
