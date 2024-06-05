@@ -1,5 +1,5 @@
 # ShabuGram
- Simple Clone of Instagram
+
 
 ## Goals
 - UI for commenting and likes
