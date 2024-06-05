@@ -83,7 +83,7 @@ export default function Record() {
   // This following section will display the form that takes the input from the user.
   return (
     <>
-      <h3 className="text-lg font-semibold p-4">Create/Update Employee Record</h3>
+      <h3 className="text-lg font-semibold p-4">Upload animal photo</h3>
       <form
         onSubmit={onSubmit}
         className="border rounded-lg overflow-hidden p-4"
@@ -91,10 +91,10 @@ export default function Record() {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-slate-900/10 pb-12 md:grid-cols-2">
           <div>
             <h2 className="text-base font-semibold leading-7 text-slate-900">
-              Employee Info
+              Photo Info
             </h2>
             <p className="mt-1 text-sm leading-6 text-slate-600">
-              This information will be displayed publicly so be careful what you
+              Information will be displayed publicly so be careful what you
               share.
             </p>
           </div>
@@ -105,7 +105,7 @@ export default function Record() {
                 htmlFor="name"
                 className="block text-sm font-medium leading-6 text-slate-900"
               >
-                Name
+                Caption
               </label>
               <div className="mt-2">
                 <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
@@ -114,7 +114,7 @@ export default function Record() {
                     name="name"
                     id="name"
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
-                    placeholder="First Last"
+                    placeholder="Photo description"
                     value={form.name}
                     onChange={(e) => updateForm({ name: e.target.value })}
                   />
@@ -126,7 +126,7 @@ export default function Record() {
                 htmlFor="position"
                 className="block text-sm font-medium leading-6 text-slate-900"
               >
-                Position
+                Animal
               </label>
               <div className="mt-2">
                 <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
@@ -135,7 +135,7 @@ export default function Record() {
                     name="position"
                     id="position"
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
-                    placeholder="Developer Advocate"
+                    placeholder="What kind of animal do you have?"
                     value={form.position}
                     onChange={(e) => updateForm({ position: e.target.value })}
                   />
@@ -148,49 +148,64 @@ export default function Record() {
                 <div className="space-y-4 sm:flex sm:items-center sm:space-x-10 sm:space-y-0">
                   <div className="flex items-center">
                     <input
-                      id="positionIntern"
+                      id="positionDog"
                       name="positionOptions"
                       type="radio"
-                      value="Intern"
+                      value="Dog"
                       className="h-4 w-4 border-slate-300 text-slate-600 focus:ring-slate-600 cursor-pointer"
-                      checked={form.level === "Intern"}
+                      checked={form.level === "Dog"}
                       onChange={(e) => updateForm({ level: e.target.value })}
                     />
                     <label
-                      htmlFor="positionIntern"
+                      htmlFor="positionDog"
                       className="ml-3 block text-sm font-medium leading-6 text-slate-900 mr-4"
                     >
-                      Intern
+                      Dog
                     </label>
                     <input
-                      id="positionJunior"
+                      id="positionCat"
                       name="positionOptions"
                       type="radio"
-                      value="Junior"
+                      value="Cat"
                       className="h-4 w-4 border-slate-300 text-slate-600 focus:ring-slate-600 cursor-pointer"
-                      checked={form.level === "Junior"}
+                      checked={form.level === "Cat"}
                       onChange={(e) => updateForm({ level: e.target.value })}
                     />
                     <label
-                      htmlFor="positionJunior"
+                      htmlFor="positionCat"
                       className="ml-3 block text-sm font-medium leading-6 text-slate-900 mr-4"
                     >
-                      Junior
+                      Cat
                     </label>
                     <input
-                      id="positionSenior"
+                      id="positionFish"
                       name="positionOptions"
                       type="radio"
-                      value="Senior"
+                      value="Fish"
                       className="h-4 w-4 border-slate-300 text-slate-600 focus:ring-slate-600 cursor-pointer"
-                      checked={form.level === "Senior"}
+                      checked={form.level === "Fish"}
                       onChange={(e) => updateForm({ level: e.target.value })}
                     />
                     <label
-                      htmlFor="positionSenior"
+                      htmlFor="positionFish"
                       className="ml-3 block text-sm font-medium leading-6 text-slate-900 mr-4"
                     >
-                      Senior
+                      Fish
+                    </label>
+                    <input
+                      id="positionBird"
+                      name="positionOptions"
+                      type="radio"
+                      value="Bird"
+                      className="h-4 w-4 border-slate-300 text-slate-600 focus:ring-slate-600 cursor-pointer"
+                      checked={form.level === "Bird"}
+                      onChange={(e) => updateForm({ level: e.target.value })}
+                    />
+                    <label
+                      htmlFor="positionBird"
+                      className="ml-3 block text-sm font-medium leading-6 text-slate-900 mr-4"
+                    >
+                      Bird
                     </label>
                   </div>
                 </div>
@@ -200,7 +215,7 @@ export default function Record() {
         </div>
         <input
           type="submit"
-          value="Save Employee Record"
+          value="Upload post"
           className="inline-flex items-center justify-center whitespace-nowrap text-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-slate-100 hover:text-accent-foreground h-9 rounded-md px-3 cursor-pointer mt-4"
         />
       </form>
