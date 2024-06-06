@@ -8,6 +8,7 @@ import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import "./index.css";
+import Preview from "./components/Preview";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,16 @@ const router = createBrowserRouter([
       {
         path: "/create",
         element: <Record />,
+      },
+    ],
+  },
+  {
+    path: "/preview",
+    element: <App />,
+    children: [
+      {
+        path: "/preview",
+        element: <Preview />,
       },
     ],
   },
