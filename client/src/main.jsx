@@ -9,6 +9,8 @@ import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import "./index.css";
 import Preview from "./components/Preview";
+import Home from "./pages/Home";
+import Feed from "./pages/Feedpage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,26 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <RecordList />,
+      },
+    ],
+  },
+  {
+    path: "/home",
+    element: <App />,
+    children: [
+      {
+        path: "/home",
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/feed",
+    element: <App />,
+    children: [
+      {
+        path: "/feed",
+        element: <Feed />,
       },
     ],
   },
