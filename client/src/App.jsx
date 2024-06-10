@@ -4,13 +4,13 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="w-full p-6">
-      <Navbar />
-      <Outlet />
-      <div>
+      <div className="w-full p-6">
+        <Navbar />
+        <Outlet />
+      <div className="footer">
       <Footer /> 
       </div>
-    </div>
+      </div>
   );
 };
 export default App

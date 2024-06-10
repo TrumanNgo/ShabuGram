@@ -26,7 +26,9 @@
 
   /** Footer **/
   #footer {
+    flex: 0 0 50px;
     position: relative;
+    margin-top: auto;
   }
 
   .footer-box {
